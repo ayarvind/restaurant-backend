@@ -12,13 +12,14 @@ services:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/restaurant
+      
 
   mongo:
     image: mongo:4.4
     container_name: mongo
     restart: always
-    volumes:
-      - /mongo-data:/data/db
+    # volumes:
+    #   - /mongo-data:/data/db
       
     ports:
       - "27017:27017"

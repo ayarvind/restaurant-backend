@@ -18,6 +18,7 @@
     "experimentalDecorators": true,             // Enable experimental support for decorators
     "emitDecoratorMetadata": true               // Emit design-type metadata for decorators
   },
+ 
   "include": ["src/**/*"],                      // Include all .ts files in the src directory
   "exclude": ["node_modules", "**/*.spec.ts"]   // Exclude node_modules and test files
 }
