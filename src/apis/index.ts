@@ -5,3 +5,4 @@ export {default as rateRestaurant} from './restaurant/rateRestaurant';
 export {default as deleteRestaurant} from './restaurant/delete';
 export {default as getRestaurants} from './restaurant/get';
 export {default as getWithInRange} from './restaurant/getWithInRange';
+export {default as updateRestaurant} from './restaurant/update';
