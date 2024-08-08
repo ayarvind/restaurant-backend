@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2017",                         // Target ECMAScript version
+    "module": "commonjs",                       // Module system
+    "strict": true,                             // Enable all strict type-checking options
+    "esModuleInterop": true,                    // Enable interoperability between CommonJS and ES Modules
+    "skipLibCheck": true,                       // Skip type checking of declaration files for faster builds
+    "forceConsistentCasingInFileNames": true,   // Ensure consistent casing in file names
+    "outDir": "./dist",                         // Output directory for compiled files
+    "baseUrl": "./src",                         // Base directory for non-relative module imports
+    "sourceMap": true,                          // Generate source maps for debugging
+    "noImplicitAny": true,                      // Raise error on expressions and declarations with an implied `any` type
+    "strictNullChecks": true,                   // Enable strict null checks
+    "strictFunctionTypes": true,                // Ensure function types are strictly checked
+    "strictBindCallApply": true,                // Ensure strict checking of the `bind`, `call`, and `apply` methods
+    "noImplicitThis": true,                     // Raise error on `this` expressions with an implied `any` type
+    "alwaysStrict": true,                       // Parse in strict mode and emit `"use strict"` for each file
+    "experimentalDecorators": true,             // Enable experimental support for decorators
+    "emitDecoratorMetadata": true               // Emit design-type metadata for decorators
+  },
+  "include": ["src/**/*"],                      // Include all .ts files in the src directory
+  "exclude": ["node_modules", "**/*.spec.ts"]   // Exclude node_modules and test files
+}
