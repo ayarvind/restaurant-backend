@@ -2,6 +2,10 @@
 
 This project is a RESTful API built using Node.js and Express, with MongoDB as the database and docker. The API allows users to register, log in, add restaurants, rate them, retrieve restaurants within a specific range, and update or delete restaurant details. The entire application is containerized using Docker.
 
+##Information
+the deployed service wll take minimum 50s to spin up after any inactivity.
+
+
 ## Table of Contents
 
 - [Installation](#installation)
