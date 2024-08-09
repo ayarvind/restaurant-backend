@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import router from './router'
 import authMiddleWare from './middleware'
+import { Request,Response } from 'express'
 dotenv.config()
 const app = express()
 const corsOptions = {
@@ -30,6 +31,9 @@ mongoose.connect(mongoUri).then(() => {
 })
 
 app.use('/api', router)
+app.get('/health', (req: Request, res: Response) => {
+    res.status(200).json({ message: 'Server is running' })
+})
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server is running on port ${process.env.PORT || 3000}`)
 })

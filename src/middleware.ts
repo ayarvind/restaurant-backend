@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
 function authMiddleWare(req: Request, res: Response, next: NextFunction) {
-    const unProtectedRoutes = ['/api/login', '/api/register'];
+    const unProtectedRoutes = ['/api/login', '/api/register','/health'];
     if (unProtectedRoutes.includes(req.path)) {
         return next();
     }

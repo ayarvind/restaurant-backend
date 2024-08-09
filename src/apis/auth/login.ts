@@ -5,6 +5,13 @@ import bcrypt from 'bcryptjs';
 
 async function login(req: Request, res: Response) {
     const { email, password } = req.body;
+    const expression = /\S+@\S+/;
+    if (!expression.test(email)) {
+        return res.status(400).json({ message: "Invalid email" });
+    }
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Missing required information' });
+    }
 
     try {
         // Find the user by email

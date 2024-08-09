@@ -2,12 +2,12 @@ import { Request, Response } from "express";
 import Restaurant from "../../models/Restaurant";
 
 async function getWithInRange(request: Request, response: Response) {
-    const { Latitude, Longitude, minimumDistance, maximumDistance } = request.query as { [key: string]: string }
-    console.log(Latitude, Longitude, minimumDistance, maximumDistance);
+    const { latitude, longitude, minimumDistance, maximumDistance } = request.query as { [key: string]: string }
+    console.log(latitude, longitude, minimumDistance, maximumDistance);
     // Validate input
     if (
-        !Latitude ||
-        !Longitude ||
+        !latitude ||
+        !longitude ||
         !minimumDistance ||
         !maximumDistance 
     ) {
@@ -15,8 +15,8 @@ async function getWithInRange(request: Request, response: Response) {
     }
 
     // Convert input to the correct types
-    const latitudeNum = parseFloat(Latitude);
-    const longitudeNum = parseFloat(Longitude);
+    const latitudeNum = parseFloat(latitude);
+    const longitudeNum = parseFloat(longitude);
     const minDistNum = parseInt(minimumDistance, 10);
     const maxDistNum = parseInt(maximumDistance, 10);
     if(isNaN(latitudeNum) || isNaN(longitudeNum) || isNaN(minDistNum) || isNaN(maxDistNum)){
